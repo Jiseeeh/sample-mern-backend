@@ -19,6 +19,7 @@ export async function getAllTodo(req: Request, res: Response) {
 
   res.status(200).json({ todos });
 }
+
 export async function getOneTodo(req: Request, res: Response) {
   const { id } = req.params;
 
@@ -27,7 +28,10 @@ export async function getOneTodo(req: Request, res: Response) {
       id,
     },
   });
+
+  res.status(200).json({ todo });
 }
+
 export async function updateTodo(req: Request, res: Response) {
   const { id } = req.params;
   const { title, body } = req.body;
@@ -44,6 +48,7 @@ export async function updateTodo(req: Request, res: Response) {
 
   res.status(200).json({ updatedTodo });
 }
+
 export async function deleteTodo(req: Request, res: Response) {
   const { id } = req.params;
 
