@@ -1,5 +1,6 @@
 import { Express } from "express";
 import express from "express";
+
 import {
   createTodo,
   getAllTodo,
@@ -17,4 +18,5 @@ app
   .patch(updateTodo)
   .delete(deleteTodo);
 
-module.exports = app;
+// module.exports = app;
+export default app;
