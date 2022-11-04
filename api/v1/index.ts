@@ -14,4 +14,7 @@ app.get("/api/home", async (req: Request, res: Response) => {
   });
 });
 
+// app.listen(process.env.PORT || PORT, () => {
+//   console.log("server started!");
+// })
 module.exports = app;
